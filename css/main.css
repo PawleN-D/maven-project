@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+body {
+    margin: 0 auto;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #343d42;
+    font-size: 14px;
+    line-height: 1.1;
+    min-height: calc(100vh - 68px - 384px);
+}
+
+p {
+    font-family: 'Titillium Web', sans-serif;
+    color: #343d42;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.44;
+}
+
+h1, h2, .h1, .h2, h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    color: #343d42;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-light-blue {
+    background-color: rgba(91, 157, 227, 0.08);
+}
+
+.btn {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    line-height: normal;
+    background: none;
+    border-radius: 40px;
+    border: 1px solid;
+    margin: 0;
+    padding: 10px 30px 12px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    white-space: normal;
+    word-wrap: break-word;
+    box-shadow: none;
+    text-decoration: none;
+}
+  
+.btn-blue {
+    background-color: #5b9de3;
+    border: 2px solid #5b9de3;
+    color: #ffffff;
+}
+/*********** Nav Bar *********/
+.navbar {
+    padding: 0.5rem 0rem;
+    background-color: #36414c;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.dark-bg {
+    background-color: #36414c;
+}
+
+nav li {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav li span {
+    padding-left: 5px;
+}
+
+nav li a {
+    padding: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#cart a {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+} 
+
+.bg-light-blue {
+    background-color: rgba(91, 157, 227, 0.08);
+}
+  
+.f-bold {
+    font-weight: bold;
+}
+  
+.bg-blue {
+    background-color: #5b9de3;
+}
+
+.blue-text {
+    color: #5b9de3;
+  }
+  
+.blk-link {
+    position: relative;
+    text-decoration: underline;
+}
+.blue-link {
+    color: #5b9de3;
+    outline: none;
+    text-decoration: underline;
+}
+
+  
+#box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px 0 rgba(25, 71, 128, 0.2);
+    min-height: calc(100% - 40px);
+    margin-bottom: 40px;
+    transition: all 0.3s ease-out 0s;
+}
+
+/**********Banner Section Styling *********/
+.banner-wrap {
+    justify-content: center;
+    margin-top: 0px;
+    min-height: calc(100vh - 67px);
+    padding: 60px 0;
+
+}
+.banner-title h1 {
+    font-size: 56px;
+    font-weight: normal;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.large {
+    background-color: #5b9de3;
+    border: 2px solid #5b9de3;
+    color: #ffffff;
+    box-shadow: 0 10px 20px 0 rgba(25, 71, 128, 0.2);
+    max-width: 330px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.banner-text {
+    margin-bottom: 30px;
+}
+
+.banner-text p {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/**********Why Maven Academy Styling *********/
+
+.why-maven-container {
+    background-color: #ffffff;
+    display: flex;
+    padding: 60px 0 60px 4%;
+}
+
+.why-us {
+    padding: 50px;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #000000;
+    width: 50%;
+}
+
+.why-us h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #343d42;
+}
+
+.why-us p {
+    text-align: left;
+    color: #343d42;
+}
+
+/********** Services and Icon Styling *********/
+
+.info {
+    width: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 15px 30px 0 rgba(25, 71, 128, 0.2);
+    border-radius: 5px;
+}
+
+.even-block-content {
+    padding: 80px 60px;
+    max-width: 685px;
+    height: 100%;
+}
+
+.academy-info {
+    width: 100%;
+}
+
+.academy-info .media .media-body h5 {
+    font-weight: bold;
+}
+
+.learn-by-icon{
+    border-radius: 8px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    padding: 15px;
+    background-color: #5b9de3;
+}
+
+#coaching-icon{
+    width: 50%;
+    border-radius: 10px;
+    background-color: #5b9de3;
+    padding: 25px;
+}
+
+#internship-icon{
+    width: 50%;
+    border-radius: 10px;
+    background-color: #5b9de3;
+    padding: 25px;
+}
+
+.service-desc{
+    text-align: left;
+    padding-left: 30px;
+}
+
+.service-desc h5 {
+    font-family: "Titillium";
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: var(--charcoal-grey);
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+
+/********** Our Courses Styling *********/
+
+.our-courses {
+    height: 808px;
+    background-color: rgba(91, 157, 227, 0.08);
+
+}
+
+.course-block {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px 0 rgba(25, 71, 128, 0.2);
+    min-height: calc(100% - 40px);
+    margin-bottom: 40px;
+    transition: all 0.3s ease-out 0s;
+
+}
+
+.course-title{
+font-family: 'Titillium Web', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #409bec
+}
+
+/********** Careers Section Stylying *********/
+
+.img-fluid {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/********** Alumni Section Styling *********/
+
+.alumni-wrapper{
+    background-color: #36414c;
+    padding: 100px 0;
+}
+
+/********** Contact Us Styling *********/
+
+
+.contact-us {
+    padding: 80px 0;
+}
+
+.main-title h2 {
+    font-size: 45px;
+    font-weight: normal;
+}
+
+#num-link {
+    color: #5b9de3;
+    outline: none;
+}
+
+/********** Footer Styling *********/
+
+footer {
+    left: 0;
+    width: 100%;
+    bottom: 0;
+}
+.footer-top {
+    background-color: #36414c;
+    /* height: 120vh; */
+    padding: 80px 0;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    
+}
+
+.footer-links ul li {
+    list-style: none;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #5b9de3;
+}
+
+.tel-number {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.address ul li p a {
+    color: #fff;
+}
+
+.link {
+    text-decoration: underline;
+}
+.address ul li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.address ul li span {
+    margin-right: 10px;
+}
+
+.address ul li p {
+    flex: 1;
+    margin-bottom: 0px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.bottom-footer {
+    background-color: #1f262d;
+    padding: 40px 0;
+}
+
+/* footer Bottom Row */
+
+.bottom-footer .social-media {
+    text-align: right;
+}
+.copy-right p {
+    color: #c6def6;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+.social-media ul li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.social-media ul li a {
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    background-color: #5b9de3;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+
+
+
+
+

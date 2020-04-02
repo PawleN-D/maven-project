@@ -1,0 +1,45 @@
+.courses-container {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+ 
+.courses-container ion-icon {
+    font-size: 25px;
+    color: #e7e7e7;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.course-title {
+    width: 45%;
+}
+
+.price {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: space-around;
+}
+
+.total {
+    width: 15%;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+}
