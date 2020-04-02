@@ -89,7 +89,7 @@
     
       <!-------------------------------------- Why Us Section ----------------------------->
     
-            <section class="why-maven-container">
+        <section class="why-maven-container">
                 <!-- Why Maven Academy div -->
                 <div class="row">
                     <div class="col-lg-6 why-us">
@@ -134,11 +134,11 @@
                         </div>K
                     </div>
                 </div>
-            </section> 
+        </section> 
         
-            <!-- Courses Section -->
+    <!------------------------------------------- Courses Section ------------------------------------------->
     
-            <section class="our-courses container-fluid p-5">
+        <section class="our-courses container-fluid p-5">
                 <h2 class="text-align-centre">Our Courses</h2>
                             <p>Immersive training programs aimed at accelerating your career in tech, regardless of your experience level. We meet you where you’re at, and support you far beyond your goals!
                             </p>
@@ -219,11 +219,11 @@
     
                 </div>
                 
-            </section>
+        </section>
     
-            <!-- Career Service Section -->
+     <!-------------------------------------------Career Service Section ------------------------------------>
     
-            <section class="m-4 p-2">
+        <section class="m-4 p-2">
                 <div class="container-fluid p-5">
                     <div class="row pl-4 m-3">
                         <div class="text-md-left">
@@ -285,11 +285,11 @@
                     </div>
         
                 </div>
-            </section>
+        </section>
     
-            <!-- Alumni Section -->
+    <!------------------------------------------- Alumni Section ------------------------------------------->
     
-            <section class="alumni-wrapper">
+         <section class="alumni-wrapper">
                 <div class="contanier">
                     <div class="owl-carousel testimonial-slider owl-theme">
                         <div class="item">
@@ -339,11 +339,11 @@
                     </div>
                 </div>
     
-            </section>
+        </section>
     
-            <!-- Contact  Us Section -->
+    <!-------------------------------------------- Contact  Us Section ------------------------------------------>
     
-            <section class="contact-us">
+        <section class="contact-us">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
@@ -365,11 +365,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
+        </section>
     
         
-        <!-- Main Footer -->
-        <footer class="">
+    <!--------------------------------------------- Main Footer ------------------------------------------->
+    <footer class="">
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
@@ -491,7 +491,7 @@
                 </div>
             </div>
     
-        </footer>
+    </footer>
         
         <script src="/js/main.js"></script>
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
@@ -501,6 +501,65 @@
         <script src="./owlcarousel/jquery.min.js"></script>
         <script src="owlcarousel/owl.carousel.min.js"></script>
     
+        <script>
+            var TxtType = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 3000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+
+                if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+                var that = this;
+                var delta = 200 - Math.random() * 100;
+
+                if (this.isDeleting) { delta /= 2; }
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                }
+
+                setTimeout(function() {
+                    that.tick();
+                }, delta);
+            };
+
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                          new TxtType(elements[i], JSON.parse(toRotate), period);
+                     }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewrite > .wrap { border-right: 0.05em solid #5b9de3}";
+                document.body.appendChild(css);
+            };
+        </script>
+
         <script>
             var logoCarousel = $('.logo-carousel');
             $('.logo-carousel').owlCarousel({

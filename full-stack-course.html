@@ -10,27 +10,50 @@
 </head>
 <body>
     <!-- Main Navigation Bar -->
-    <header class="header">
-        <div class="nav-container">
-             <!-- Navigation Logo -->
-            <div class="header-logo">
-                <a href="">
-                    <img src="./images/icons/footer-logo.png" alt="maven-logo">
-                </a>
+    <header class="main-nav sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid m-0 pl-4 pt-2 pb-2">
+                <a class="navbar-brand" href="index.html"> 
+                    <img src= "./images/icons/footer-logo.png" alt="maven-logo"> 
+                </a> 
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"       aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ml-lg-auto align-self-lg-center">
+                        <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item cart">
+                            <a class="nav-link" href="/courses.html">
+                                Courses
+                            </a>
+                        </li>
+                        <li class="nav-item cart">
+                            <a class="nav-link" href="contact.html">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                Cart
+                            </a>
+                        </li>
+                        <li class="nav-item cart" id="cart">
+                            <a class="nav-link" href="cart.html">
+                                <img src="./images/icons/basket-icon-png.png" alt="" width="15" height="15">
+                                <sup>0</sup>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- Navigation Links -->
-            <div class="header-nav">
-                <nav class="main-nav">
-                    <a href="./index.html">Home</a>
-                    <a href="./course-outline.html">Courses</a>
-                    <a href="#"> Contact</a>
-                    <a href="./cart.html">Cart</a>
-                </nav>
-            </div>
-           
-        </div>
-    
+          </nav>
+
+
     </header>
+
+
 
     <!-- Main Footer -->
     <footer>
