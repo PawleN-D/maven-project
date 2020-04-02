@@ -138,9 +138,11 @@ nav li a {
   }
   
 .blk-link {
+    color: #343d42;
     position: relative;
     text-decoration: underline;
 }
+
 .blue-link {
     color: #5b9de3;
     outline: none;
@@ -211,16 +213,10 @@ img {
     padding: 60px 0 60px 4%;
 }
 
-.why-us {
-    padding: 50px;
-    font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #000000;
-    width: 50%;
+.why-us-block {
+    /* width: 100%; */
+    padding: 60px 100px;
+    
 }
 
 .why-us h2 {
@@ -235,87 +231,69 @@ img {
 }
 
 /********** Services and Icon Styling *********/
-
-.info {
-    width: 50%;
-    background-color: #ffffff;
-    box-shadow: 0 15px 30px 0 rgba(25, 71, 128, 0.2);
-    border-radius: 5px;
+.why-us-wrap {
+    padding: 80px 0 80px;
 }
 
-.even-block-content {
-    padding: 80px 60px;
-    max-width: 685px;
-    height: 100%;
-}
 
-.academy-info {
-    width: 100%;
-}
-
-.academy-info .media .media-body h5 {
+.media .media-body h5 {
     font-weight: bold;
 }
 
-.learn-by-icon{
-    border-radius: 8px;
-    width: 75px;
-    height: 75px;
-    text-align: center;
-    padding: 15px;
-    background-color: #5b9de3;
-}
-
-#coaching-icon{
-    width: 50%;
-    border-radius: 10px;
-    background-color: #5b9de3;
-    padding: 25px;
-}
-
-#internship-icon{
-    width: 50%;
-    border-radius: 10px;
-    background-color: #5b9de3;
-    padding: 25px;
-}
-
-.service-desc{
-    text-align: left;
-    padding-left: 30px;
-}
-
-.service-desc h5 {
-    font-family: "Titillium";
-    font-size: 22px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.09;
-    letter-spacing: normal;
-    color: var(--charcoal-grey);
-    margin-bottom: 30px;
-    margin-top: 0;
-}
-
-
-/********** Our Courses Styling *********/
-
-.our-courses {
-    height: 808px;
-    background-color: rgba(91, 157, 227, 0.08);
-
-}
-
-.course-block {
+.service-box {
+    padding: 60px 4% 40px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 15px 30px 0 rgba(25, 71, 128, 0.2);
     min-height: calc(100% - 40px);
     margin-bottom: 40px;
     transition: all 0.3s ease-out 0s;
-
 }
+
+.service-box .media {
+    margin-bottom: 40px;
+}
+
+.icon-square {
+    border-radius: 8px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
+    .service-box .media .media-body {
+        margin-left: 40px;
+    }
+}
+
+
+
+/********** Our Courses Styling *********/
+
+.our-courses-wrap {
+    padding: 80px 0;
+}
+
+.our-course-slider {
+    margin: 0px -15px 0px -15px;
+}
+
+.courses-box {
+    padding: 30px 35px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 20px 0 rgba(25, 71, 128, 0.2);
+    border-radius: 5px;
+    min-height: calc(100% - 20px);
+    margin: 30px 15px;
+    color: #8b8b8b;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease-out 0s;
+}
+
 
 .course-title{
 font-family: 'Titillium Web', sans-serif;

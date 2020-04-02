@@ -26,6 +26,19 @@
     margin-bottom: 40px;
     transition: all 0.3s ease-out 0s;
 }
+.courses-box {
+    padding: 10px 35px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 20px 0 rgba(25, 71, 128, 0.2);
+    border-radius: 5px;
+    min-height: calc(100% - 20px);
+    margin: 30px 20px;
+    color: #8b8b8b;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease-out 0s;
+}
 
 .course-img{
     padding: 0 30px;
@@ -34,6 +47,10 @@
 
 .our-courses-wrap {
     padding: 80px 0;
+}
+
+.our-course-slider {
+    margin: 0px px 0px -15px;
 }
 
 .our-course-slider .box .box-header {
@@ -56,4 +73,38 @@
 .btn-md {
     max-width: 300px;
     width: 100%;
+}
+
+/* Study at CPT Campus Stylying */
+
+.box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px 0 rgba(25, 71, 128, 0.2);
+    min-height: calc(100% - 40px);
+    margin-bottom: 40px;
+    transition: all 0.3s ease-out 0s;
+}
+
+.icon-square {
+    border-radius: 8px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
+    .ct-campus .media .media-body {
+        margin-left: 40px;
+    }
+}
+
+.join-mail .btn.small {
+    width: 100%;
+}
+
+.btn-blue-outline {
+    border: 2px solid #60a0e3;
+    color: #5b9de3;
 }

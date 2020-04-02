@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ml-lg-auto align-self-lg-center">
                         <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item cart">
                             <a class="nav-link" href="#">
@@ -59,14 +59,18 @@
 
     <!-------------------------------------- Main Banner Section ----------------------------->
 
-    <section class="mt-5">
+    <section class="banner-wrap d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="courses-banner text-center">
-                        <div class="text-center">
-                            <img src="./images/courses-banner.png" alt="courses-banner">
-                        </div>
+                    <div class="banner-title mb-4 text-center">
+                        <h1>Our Courses</h1>
+                    </div>
+                    <div class="text-center mb-4">
+                        <img src="./images/courses-banner.png" alt="courses-banner">
+                    </div>
+                    <div class="banner-text text-center">
+                        <p>Immersive training programs aimed at accelerating your career in tech, regardless of your experience level. We meet you where you’re at, and support you far beyond your goals!</p>
                     </div>
                 </div>
             </div>
@@ -78,23 +82,11 @@
 
     <section class="courses-wrap">
         <div class="container">
-            <div class="row ">
-                <div class="col-lg-8 mx-auto">
-                    <div class="courses-title text-center">
-                        <h1 class="mb-0">Our Courses</h1>
-                    </div>
-                    <div class="courses-title intro text-center">
-                        <p>Immersive training programs aimed at accelerating your career in tech, regardless of your experience level. We meet you where you’re at, and support you far beyond your goals!
-                        </p>
-                    </div>
-
-                </div>
-            </div>
      <!-------------------------------------- Carousel Container ----------------------------->
-            <div class="our-course-slider mt-5">
+            <div class="our-course-slider">
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-                        <div class="box d-flex flex-column text-center">
+                        <div class="courses-box d-flex flex-column text-center">
                             <div class="course-title text-left">
                                 <a href="#" class="blue-link f-15 f-bold text-decoration-none">Become a Full Stack Web Developer</a>
                             </div>
@@ -104,10 +96,10 @@
                             <div class="course-img text-center">
                                 <img src="./images/full-stack-dev.png" alt="full-stack-banner">
                             </div>
-                            <div class="course-price text-center">
+                            <div class="course-price text-center mb-0">
                                 <p class="text-md-center course-title">R26,000,00 Excl Vat</p>
                             </div>
-                            <div class="course-details text-center">
+                            <div class="course-details text-center mb-4">
                                 <a href="#" class="blk-link">View course detail</a>
                             </div>
                             <div class="course-add text-center mb-4">
@@ -116,7 +108,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="box d-flex flex-column text-center">
+                        <div class="courses-box d-flex flex-column text-center">
                             <div class="course-title text-left">
                                 <a href="#" class="blue-link f-15 f-bold text-decoration-none">Become a Front End Web Developer</a>
                             </div>
@@ -124,12 +116,12 @@
                                 <p>4 Week Course - In classroom</p>
                             </div>
                             <div class="course-img text-center">
-                                <img src="./images/full-stack-dev.png" alt="front-end  banner">
+                                <img src="./images/frontend-dev.png" alt="front-end  banner">
                             </div>
                             <div class="course-price text-center">
                                 <p class="text-md-center course-title">R10,000,00 Excl Vat</p>
                             </div>
-                            <div class="course-details text-center">
+                            <div class="course-details text-center mb-4">
                                 <a href="#" class="blk-link">View course detail</a>
                             </div>
                             <div class="course-add text-center mb-4">
@@ -138,7 +130,7 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div class="box d-flex flex-column text-center">
+                        <div class="courses-box d-flex flex-column text-center">
                             <div class="course-title text-left">
                                 <a href="#" class="blue-link f-15 f-bold text-decoration-none">Become a Java Spring Developer</a>
                             </div>
@@ -151,11 +143,41 @@
                             <div class="course-price text-center">
                                 <p class="text-md-center course-title">R26,000,00 Excl Vat</p>
                             </div>
-                            <div class="course-details text-center">
+                            <div class="course-details text-center mb-4">
                                 <a href="#" class="blk-link">View course detail</a>
                             </div>
                             <div class="course-add text-center mb-4">
                                 <a href="" class="btn btn-outline-primary btn-blue-outline btn-md small text-capitalize" id="add-cart">Add to enquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box p-5 mt-5 ct-campus">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="media">
+                            <div class="icon-square d-flex justify-content-center bg-blue">
+                                <img src="/images/paper-plane.svg" alt="Paper Plane">
+                            </div>
+                            <div class="media-body align-self-center">
+                                <p class="mb-0">
+                                    Join our mailing list to stay up-to-date on upcoming courses and events.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 align-self-center">
+                        <div class="row">
+                            <div class="col-md-8 align-self-center">
+                                <div class="mb-3 mb-md-0">
+                                    <input type="email" class="form-control" placeholder="Your email" autocapitalize="none" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-md-4 align-self-center">
+                                <div class="join-mail">
+                                    <button type="submit" class="btn btn-blue-outline small d-block">Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -300,12 +322,14 @@
     <script src="owlcarousel/owl.carousel.min.js"></script>
 
     <script>
-        var logoCarousel = $('.owl-carousel');
+
+        var courseCarousel = $('.owl-carousel');
         $('.owl-carousel').owlCarousel({
             loop:true,
             margin: 30,
             dots: false,
             autoplay: true,
+            autoplayTimeout: 2500,
             responsive:{
                 0:{
                     items:1
