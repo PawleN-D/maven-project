@@ -13,7 +13,6 @@ html {
     height: 100%;
 }
 
-
 body {
     margin: 0 auto;
     font-family: 'Titillium Web', sans-serif;
@@ -76,7 +75,9 @@ ol, ul {
     border: 2px solid #5b9de3;
     color: #ffffff;
 }
-/*********** Nav Bar *********/
+
+    /*********************************** Navbar CSS**** Start **************************/
+
 .navbar {
     padding: 0.5rem 0rem;
     background-color: #36414c;
@@ -93,6 +94,17 @@ ol, ul {
     color: #ffffff;
     text-transform: uppercase;
     position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #459de9;
+    transition: all 0.2s ease-in-out;
 }
 
 .dark-bg {
@@ -159,7 +171,10 @@ nav li a {
     transition: all 0.3s ease-out 0s;
 }
 
-/**********Banner Section Styling *********/
+    /*********************************** Navbar CSS**** End **************************/
+
+    /*********************************** Banner Section CSS**** Start **************************/
+
 .banner-wrap {
     justify-content: center;
     margin-top: 0px;
@@ -205,8 +220,10 @@ img {
     font-size: 18px;
 }
 
-/**********Why Maven Academy Styling *********/
+    /*********************************** Banner Section CSS**** End **************************/
 
+    /*********************************** Why Maven Academy CSS**** Start **************************/
+   
 .why-maven-container {
     background-color: #ffffff;
     display: flex;
@@ -230,7 +247,8 @@ img {
     color: #343d42;
 }
 
-/********** Services and Icon Styling *********/
+
+/********** Services and Icon CSS *********/
 .why-us-wrap {
     padding: 80px 0 80px;
 }
@@ -268,9 +286,10 @@ img {
     }
 }
 
+    /*********************************** Why Maven Academy CSS**** End **************************/
 
+    /*********************************** Our Courses CSS**** Start **************************/
 
-/********** Our Courses Styling *********/
 
 .our-courses-wrap {
     padding: 80px 0;
@@ -286,7 +305,7 @@ img {
     box-shadow: 0 15px 20px 0 rgba(25, 71, 128, 0.2);
     border-radius: 5px;
     min-height: calc(100% - 20px);
-    margin: 30px 15px;
+    margin: 30px 5px;
     color: #8b8b8b;
     line-height: 1.5;
     text-align: center;
@@ -296,7 +315,7 @@ img {
 
 
 .course-title{
-font-family: 'Titillium Web', sans-serif;
+ font-family: 'Titillium Web', sans-serif;
   font-size: 15px;
   font-weight: bold;
   font-stretch: normal;
@@ -306,7 +325,20 @@ font-family: 'Titillium Web', sans-serif;
   color: #409bec
 }
 
-/********** Careers Section Stylying *********/
+.our-course-slider .owl-carousel .owl-item .item {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+    /*********************************** Our Courses CSS**** End **************************/
+
+    /*********************************** Careers Section CSS**** Start **************************/
+
 
 .img-fluid {
     max-width: 100%;
@@ -314,15 +346,21 @@ font-family: 'Titillium Web', sans-serif;
     display: block;
 }
 
-/********** Alumni Section Styling *********/
+    /*********************************** Careers Section CSS**** End **************************/
+
+
+    /*********************************** Alumni Section CSS**** Start **************************/
+
 
 .alumni-wrapper{
     background-color: #36414c;
     padding: 100px 0;
 }
 
-/********** Contact Us Styling *********/
 
+    /*********************************** Alumni Section CSS**** End **************************/
+
+    /*********************************** Contact Us CSS**** Start **************************/
 
 .contact-us {
     padding: 80px 0;
@@ -425,7 +463,6 @@ footer {
     font-size: 12px;
     margin: 0;
 }
-
 
 .social-media ul li {
     display: inline-block;

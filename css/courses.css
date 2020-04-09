@@ -32,7 +32,7 @@
     box-shadow: 0 15px 20px 0 rgba(25, 71, 128, 0.2);
     border-radius: 5px;
     min-height: calc(100% - 20px);
-    margin: 30px 20px;
+    margin: 30px 5px;
     color: #8b8b8b;
     line-height: 1.5;
     text-align: center;
@@ -50,7 +50,7 @@
 }
 
 .our-course-slider {
-    margin: 0px px 0px -15px;
+    margin: 0px -15px 0px -15px;
 }
 
 .our-course-slider .box .box-header {
@@ -107,4 +107,14 @@
 .btn-blue-outline {
     border: 2px solid #60a0e3;
     color: #5b9de3;
+}
+
+.our-course-slider .owl-carousel .owl-item .item {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    padding: 20px;
+    padding-bottom: 30px;
 }

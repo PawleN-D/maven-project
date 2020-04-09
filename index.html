@@ -26,7 +26,7 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                       <ul class="navbar-nav ml-lg-auto align-self-lg-center">
                             <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item cart">
                                 <a class="nav-link" href="/our-courses.html">
@@ -107,40 +107,43 @@
                         </div>
                         <!-- List of Services div -->
                         <div class="col service-box">
-                            <div class="media">
-                                <div class="icon-square d-flex justify-content-center bg-blue">
-                                    <img src="/images/learn-by-creating.svg" alt="learn-by-creating">
-                                </div>
-                                <div class="media-body align-self-center">
-                                    <h5 class="mt-0 mb-2">Learn by creating</h5>
-                                    <p class="mb-0">
-                                        Master the art of code by working on projects that reflect the kind of work you will carry out for future employers and clients.
-                                    </p>
-                                </div>
+                            <div class="service-block w-100">
+                                <ul class="list-unstyled">
+                                    <li class="media">
+                                        <div class="icon-square d-flex justify-content-center bg-blue">
+                                            <img src="/images/learn-by-creating.svg" alt="learn-by-creating">
+                                        </div>
+                                        <div class="media-body align-self-center">
+                                            <h5 class="mt-0 mb-2">Learn by creating</h5>
+                                            <p class="mb-0">
+                                                Master the art of code by working on projects that reflect the kind of work you will carry out for future employers and clients.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="media my-5">
+                                        <div class="icon-square d-flex justify-content-center bg-blue">
+                                            <img src="/images/expert-coaching.svg" alt="coaching-icon">
+                                        </div>
+                                        <div class="media-body align-self-center">
+                                            <h5 class="mt-0 mb-2">Expert coaching</h5>
+                                            <p class="mb-0">
+                                                Adopt the best-practice development techniques with on-demand access to mentors bringing their global tech exposure directly to you. Consistent feedback and mentorship refine your skills until you are comfortable producing efficient, production-grade code without hesitation.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <div class="icon-square d-flex justify-content-center bg-blue">
+                                            <img src="/images/internship-prog.svg" alt="Internship Programme">
+                                        </div>
+                                        <div class="media-body align-self-center">
+                                            <h5 class="mt-0 mb-2">Internship Programme</h5>
+                                            <p class="mb-0">
+                                                Don’t struggle   with the job hunt! Hit the ground sprinting with our exclusive platform that allows you to Work, Learn, and Earn at the same time
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="media mb-4">
-                                <div class="icon-square d-flex justify-content-center bg-blue">
-                                    <img src="/images/expert-coaching.svg" alt="coaching-icon">
-                                </div>
-                                <div class="media-body align-self-center">
-                                    <h5 class="mt-0 mb-2">Expert coaching</h5>
-                                    <p class="mb-0">
-                                        Adopt the best-practice development techniques with on-demand access to mentors bringing their global tech exposure directly to you. Consistent feedback and mentorship refine your skills until you are comfortable producing efficient, production-grade code without hesitation.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media mb-4">
-                                <div class="icon-square d-flex justify-content-center bg-blue">
-                                    <img src="/images/internship-prog.svg" alt="Internship Programme">
-                                </div>
-                                <div class="media-body align-self-center">
-                                    <h5 class="mt-0 mb-2">Internship Programme</h5>
-                                    <p class="mb-0">
-                                        Don’t struggle   with the job hunt! Hit the ground sprinting with our exclusive platform that allows you to Work, Learn, and Earn at the same time
-                                    </p>
-                                </div>
-                            </div>
-
                         </div>
     
     
@@ -626,13 +629,14 @@
                 margin: 30,
                 dots: false,
                 autoplay: true,
-                autoplayTimeout: 2500,
+                autoplayTimeout: 6000,
                 responsive:{
                     0:{
                         items:1
+
                     },
                     600:{
-                        items:3
+                        items:1
                     },
                     1000:{
                         items:3

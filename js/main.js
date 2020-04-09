@@ -1,6 +1,12 @@
 'use strict';
-// -----------------------------Typewriter Heading Functionality -----------------------------
-
+// ----------------------------- Navbar Basket Functionality -----------------------------
+(function(){
+ 
+    $("#cart").on("click", function() {
+      $(".shopping-cart").fadeToggle( "fast");
+    });
+    
+  })();
 
 // --------------------------------------Cart Functionality -----------------------------
 let carts = document.querySelectorAll('#add-cart');
@@ -18,7 +24,7 @@ let fullStack = new course("Become a Full Stack Developer","full-stack-dev", "12
 let javaSpring = new course("Become a Java Spring Boot Developer","spring-boot-dev", "12 week course - In classroom ", 26000, 0);
 
 
-let courses = [frontEnd, fullStack, javaSpring];
+let courses = [fullStack, frontEnd, javaSpring];
 
 for (let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', ($event) => {
@@ -93,40 +99,89 @@ function displayCart() {
     let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-display');
+    let cartCost = localStorage.getItem('totalCost');
     if (cartItems && courseContainer) {
         courseContainer.innerHTML = '';
         Object.values(cartItems).map(course => {
             courseContainer.innerHTML += `
-        <div class="row d-flex align-items-center border-bottom w-100">
-            <div class="col-sm-4 text-left d-flex">
-                <div class="course-thumb">
-                    <ion-icon name="close-circle"></ion-icon>
-                    <img class="img-responsive" src="./images/${course.tag}.png" class="img-thumbnail" width=70 height=100>
+                <div class="row d-flex align-items-center border-bottom w-100">
+                    <div class="col-sm-4 text-left d-flex">
+                        <div class="row">
+                            <div class="col-1 align-items-center pt-5">
+                                <div class="pt-3 pb-0">
+                                    <ion-icon name="close-circle-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="col-4 mb-4 pt-3">
+                                <div class="course-thumb">
+                                    <img class="img-responsive" src="./images/${course.tag}.png">
+                                </div>
+                            </div>
+                            <div class="col-7 p-4 align-items-center">
+                                <div class="text-wrap pt-5">
+                                    <p style="font-size: 13px;">${course.name}<br/>
+                                        ${course.period}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 text-left blue-link">
+                        R${course.price},00 Excl VAT
+                    </div>
+                    <div class="col-sm-2 text-left">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                        <span>${course.inCart}</span>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                    <div class="col-sm-3 text-left">
+                        R${course.inCart * course.price}, 00
+                    </div>
                 </div>
-                <div class="course-desc">
-                    <p>${course.name}<br/>
-                    ${course.period}</p>
-                </div>
-            </div>
-            <div class="col-sm-3 text-left blue-link">
-                R${course.price},00 Excl VAT
-            </div>
-            <div class="col-sm-2 text-left">
-                <ion-icon name="caret-back-circle"></ion-icon>
-                <span>${course.inCart}</span>
-                <ion-icon name="caret-forward-circle"></ion-icon>
-            </div>
-            <div class="col-sm-3 text-left">
-                R${course.inCart * course.price}, 00
-            </div>
-        </div>
-    
             `;
-        });
 
+        });
+    
+        courseContainer.innerHTML += `
+        <div class="row w-100 p-3">
+            <div class="col-lg-10"></div>
+            <div class="col-lg-2">
+                <div class="title mb-4">
+                    <h6 class="f-bold">Cart Totals</h6>
+                </div>
+                    <div class="row d-flex align-items-center border-bottom w-100">
+                        <div class="col py-2 px-4">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="col">
+                            <p class="blue-link">R${cartCost}</p>  
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center border-bottom w-100">
+                        <div class="col py-2 px-4">
+                            <p>VAT(15%</p>
+                        </div>
+                        <div class="col">
+                            <p class="blue-link">R${cartCost * 0.15}, 00</p>  
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center border-bottom w-100">
+                        <div class="col py-2 px-4">
+                            <p>Total</p>
+                        </div>
+                        <div class="col">
+                            <p class="blue-link">R${(cartCost + (cartCost * 0.15))}, 00</p>  
+                        </div>
+                    </div>
+            </div>
+
+                
+        </div>
+            `;
         
     }
 }
+
+
 
 displayCart();
 onLoadCartNumbers();

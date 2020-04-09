@@ -10,7 +10,8 @@
     <title>Full Stack Course Outline</title>
 </head>
 <body>
-    <!-- Main Navigation Bar -->
+        <!---------------------------------------------- Main Navigation Bar ---------------------------------------------->
+    <!--  -->
     <header class="main-nav sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid m-0 pl-4 pt-2 pb-2">
@@ -23,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ml-lg-auto align-self-lg-center">
                         <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item cart">
                             <a class="nav-link" href="/courses.html">
@@ -53,14 +54,225 @@
 
 
     </header>
+    <!---------------------------------------------- Sidebar Cart ---------------------------------------------->
+
+    <div class="container">
+        <div class="shopping-cart">
+          <div class="shopping-cart-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+          </div> <!--end shopping-cart-header -->
+      
+          <ul class="shopping-cart-items">
+            <li class="clearfix">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+              <span class="item-name">Sony DSC-RX100M III</span>
+              <span class="item-price">$849.99</span>
+              <span class="item-quantity">Quantity: 01</span>
+            </li>
+      
+            <li class="clearfix">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
+              <span class="item-name">KS Automatic Mechanic...</span>
+              <span class="item-price">$1,249.99</span>
+              <span class="item-quantity">Quantity: 01</span>
+            </li>
+      
+            <li class="clearfix">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg" alt="item1" />
+              <span class="item-name">Kindle, 6" Glare-Free To...</span>
+              <span class="item-price">$129.99</span>
+              <span class="item-quantity">Quantity: 01</span>
+            </li>
+          </ul>
+      
+          <a href="#" class="button">Checkout</a>
+        </div> <!--end shopping-cart -->
+      </div> <!--end container -->
+    <!---------------------------------------------- Course Outline ---------------------------------------------->
 
     <section class="course-outline-wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 d-none d-lg-block">
-                    
+        <div class="container-fluid">
+            <div class="row px-5">
+                <div class="col-lg-4 d-none d-lg-block px-2">
+                    <div class="course-box d-flex flex-column text-center">
+                        <div class="course-title text-center">
+                            <a href="#" class="blue-link f-15 f-bold text-decoration-none">Become a Full Stack Web Developer</a>
+                        </div>
+                        <div class="course-duration text-center">
+                            <p>12 Week Course - In classroom</p>
+                        </div>
+                        <div class="course-img text-center">
+                            <img src="./images/full-stack-dev.png" alt="full-stack-banner">
+                        </div>
+                        <div class="course-price text-center mb-0">
+                            <p class="text-md-center course-title">R26,000,00 Excl Vat</p>
+                        </div>
+                        <div class="course-add text-center mb-4">
+                            <a href="#" class="btn btn-outline-primary btn-blue-outline btn-md small text-capitalize" id="add-cart">Add to Cart</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col lg-8"></div>
+                <div class="col lg-8 px-2">
+                    <div class="main-title mb-5">
+                        <h2>Course Outline</h2>
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs modules-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#pre-work" role="tab" aria-controls="home" aria-selected="true">Pre-work</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#module1" role="tab" aria-controls="profile" aria-selected="false">Module 1</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#module2" role="tab" aria-controls="messages" aria-selected="false">Module 2</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#module3" role="tab" aria-controls="settings" aria-selected="false">Module 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#module4" role="tab" aria-controls="settings" aria-selected="false">Module 4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#master" role="tab" aria-controls="settings" aria-selected="false">Master Class Electives</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content module-tab-cont">
+                        <div class="tab-pane active fade show sub-tab-body" id="pre-work" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="block-text bg-light-blue p-5 mb-5">
+                                <div class="title mb-4">
+                                    <h4 class="f-bold">Pre-Work</h4>
+                                </div>
+                                <p class="mb-0">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero magnam, incidunt vitae iure facere aperiam voluptates eveniet! Quibusdam, impedit mollitia cupiditate voluptatem, fugit maxime cum repudiandae et eius quos perspiciatis!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="module1" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="block-text bg-light-blue p-5 mb-5">
+                                <div class="title mb-4">
+                                    <h4 class="f-bold">Module 1</h4>
+                                </div>
+                                <p class="mb-0">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero magnam, incidunt vitae iure facere aperiam voluptates eveniet! Quibusdam, impedit mollitia cupiditate voluptatem, fugit maxime cum repudiandae et eius quos perspiciatis!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="module2" role="tabpanel" aria-labelledby="messages-tab">
+                            <div class="block-text bg-light-blue p-5 mb-5">
+                                <div class="title mb-4">
+                                    <h4 class="f-bold">Module 2</h4>
+                                </div>
+                                <p class="mb-0">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero magnam, incidunt vitae iure facere aperiam voluptates eveniet! Quibusdam, impedit mollitia cupiditate voluptatem, fugit maxime cum repudiandae et eius quos perspiciatis!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="module3" role="tabpanel" aria-labelledby="settings-tab">
+                            <div class="block-text bg-light-blue p-5 mb-5">
+                                <div class="title mb-4">
+                                    <h4 class="f-bold">Module 3</h4>
+                                </div>
+                                <p class="mb-0">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero magnam, incidunt vitae iure facere aperiam voluptates eveniet! Quibusdam, impedit mollitia cupiditate voluptatem, fugit maxime cum repudiandae et eius quos perspiciatis!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="module4" role="tabpanel" aria-labelledby="settings-tab">
+                            <div class="block-text bg-light-blue p-5 mb-5">
+                                <div class="title mb-4">
+                                    <h4 class="f-bold">Module 4</h4>
+                                </div>
+                                <p class="mb-0">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero magnam, incidunt vitae iure facere aperiam voluptates eveniet! Quibusdam, impedit mollitia cupiditate voluptatem, fugit maxime cum repudiandae et eius quos perspiciatis!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="master" role="tabpanel" aria-labelledby="settings-tab">
+                            <div class="block-text bg-light-blue p-5 mb-5">
+                                <div class="title mb-4">
+                                    <h4 class="f-bold">Master Class Electives</h4>
+                                </div>
+                                <p class="mb-0">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero magnam, incidunt vitae iure facere aperiam voluptates eveniet! Quibusdam, impedit mollitia cupiditate voluptatem, fugit maxime cum repudiandae et eius quos perspiciatis!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- empty space -->
+                </div>
+                <div class="col-lg-8">
+                    <div class="box p-5 mt-5 ct-campus">
+                        <div class="row">
+                            <div class="col">
+                                <div class="media">
+                                    <div class="icon-square d-flex justify-content-center bg-blue">
+                                        <img src="/images/paper-plane.svg" alt="Paper Plane">
+                                    </div>
+                                    <div class="media-body align-self-center">
+                                        <p class="mb-4">
+                                            Want to find out more about what you will learn during our 12 Week Full Stack Web Developer Course. 
+                                        </p>
+                                        <a href="#download" data-toggle="modal" class="blue-link">
+                                            Click here to Download the Curriculum 
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    <!---------------------------------------------- Modal ---------------------------------------------->
+                <div class="modal fade" id="download" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ct-campus">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="media">
+                                                <div class="icon-square d-flex justify-content-center bg-blue">
+                                                    <img src="/images/paper-plane.svg" alt="Paper Plane">
+                                                </div>
+                                                <div class="media-body align-self-center">
+                                                    <p class="mb-0">
+                                                        Join our mailing list to stay up-to-date on upcoming courses and events.
+                                                    </p>
+                                                    <div class="row">
+                                                        <div class="col-md-8 align-self-center">
+                                                            <div class="mb-3 mb-md-0">
+                                                                <input type="email" class="form-control" placeholder="Your email" autocapitalize="none" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 align-self-center">
+                                                            <div class="join-mail">
+                                                                <button type="submit" class="btn btn-blue-outline small d-block">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
     </section>
@@ -164,5 +376,10 @@
         </div>
 
     </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

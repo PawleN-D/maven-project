@@ -1,4 +1,4 @@
-.courses-container {
+/* .courses-container {
     max-width: 650px;
     justify-content: space-around;
     margin: 0 auto;
@@ -42,4 +42,13 @@
     border-bottom: 4px solid lightgray;
     display: flex;
     align-items: center;
+} */
+
+
+.products-container ion-icon {
+    font-size: 25px;
+    color: rgb(222, 222, 247);
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
 }
