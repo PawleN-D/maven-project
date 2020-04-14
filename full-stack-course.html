@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="css/course-outline.css">
     <title>Full Stack Course Outline</title>
+    <style>
+        .dropdown-wrapper:hover .cart-dropdown {
+            display: block;
+        }
+    </style>
 </head>
 <body>
         <!---------------------------------------------- Main Navigation Bar ---------------------------------------------->
@@ -41,10 +46,15 @@
                             </a>
                         </li>
                         <li class="nav-item cart" id="cart">
-                            <a class="nav-link" href="cart.html">
-                                <img src="./images/icons/basket-icon-png.png" alt="" width="15" height="15">
-                                <sup>0</sup>
-                            </a>
+                            <div class="dropdown-wrapper">
+                                <a class="nav-link" href="cart.html">
+                                    <img src="./images/icons/basket-icon-png.png" alt="" width="15" height="15">
+                                    <sup>0</sup>
+                                </a>
+                                <div class="cart-dropdown" style="display: none;">
+                                   Cart dropdown content
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -55,40 +65,7 @@
     </header>
     <!---------------------------------------------- Sidebar Cart ---------------------------------------------->
 
-    <div class="container">
-        <div class="shopping-cart">
-          <div class="shopping-cart-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-          </div> <!--end shopping-cart-header -->
-      
-          <ul class="shopping-cart-items">
-            <li class="clearfix">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
-              <span class="item-name">Sony DSC-RX100M III</span>
-              <span class="item-price">$849.99</span>
-              <span class="item-quantity">Quantity: 01</span>
-            </li>
-      
-            <li class="clearfix">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
-              <span class="item-name">KS Automatic Mechanic...</span>
-              <span class="item-price">$1,249.99</span>
-              <span class="item-quantity">Quantity: 01</span>
-            </li>
-      
-            <li class="clearfix">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg" alt="item1" />
-              <span class="item-name">Kindle, 6" Glare-Free To...</span>
-              <span class="item-price">$129.99</span>
-              <span class="item-quantity">Quantity: 01</span>
-            </li>
-          </ul>
-      
-          <a href="#" class="button">Checkout</a>
-        </div> <!--end shopping-cart -->
-      </div> <!--end container -->
+ <!--end container -->
     <!---------------------------------------------- Course Outline ---------------------------------------------->
 
     <section class="course-outline-wrap">
