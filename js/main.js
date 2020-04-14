@@ -1,12 +1,6 @@
 'use strict';
 // ----------------------------- Navbar Basket Functionality -----------------------------
-(function(){
- 
-    $("#cart").on("click", function() {
-      $(".shopping-cart").fadeToggle( "fast");
-    });
-    
-  })();
+
 
 // --------------------------------------Cart Functionality -----------------------------
 let carts = document.querySelectorAll('#add-cart');
@@ -35,20 +29,20 @@ for (let i = 0; i < carts.length; i++){
 }
 
 function onLoadCartNumbers(){
-    let productNumbers = localStorage.getItem('cartNumbers');
+    let courseNumbers = localStorage.getItem('cartNumbers');
 
-    if (productNumbers) {
-        document.querySelector('#cart sup').textContent = productNumbers;
+    if (courseNumbers) {
+        document.querySelector('#cart sup').textContent = courseNumbers;
     }
 }
 
 function cartNumbers(course) {
-    let productNumbers = localStorage.getItem('cartNumbers');
-    productNumbers = Number(productNumbers);
+    let courseNumbers = localStorage.getItem('cartNumbers');
+    courseNumbers = Number(courseNumbers);
 
-    if(productNumbers){
-        localStorage.setItem('cartNumbers', productNumbers + 1);
-        document.querySelector('#cart sup').textContent = productNumbers + 1;
+    if(courseNumbers){
+        localStorage.setItem('cartNumbers', courseNumbers + 1);
+        document.querySelector('#cart sup').textContent = courseNumbers + 1;
     } else {
         localStorage.setItem('cartNumbers', 1);
         document.querySelector('#cart sup').textContent = 1;
