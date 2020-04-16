@@ -75,3 +75,21 @@
         margin-left: 40px;
     }
 }
+    /*********************************** Cart Hover CSS**** Start **************************/
+
+    .cart-hover {
+        margin: 20px 0;
+        float: right;
+        background-color: #ffffff;
+        width: 430px;
+        position: relative;
+        border-radius: 3px;
+        padding: 20px;
+        position: absolute;
+        display: none;
+        box-shadow: 0 15px 30px 0 rgba(25, 71, 128, 0.2);
+        top: 50px;
+        right: 5px;
+        z-index: 3;
+        height: 100%;
+    }
