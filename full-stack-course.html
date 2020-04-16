@@ -57,10 +57,27 @@
 
     </header>
     <!---------------------------------------------- Sidebar Cart ---------------------------------------------->
-    <div class="container">
+    <div class="container-fluid">
         <div class="cart-hover"id="cart-hover">
-            <div >
-                <h1>hello</h1>
+            <div class="container">
+                <div class="cart-header">
+                    <div class="main-title">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 class="mb-4">Cart</h2>
+                        <p>Items</p>
+
+                    </div>
+                </div>
+                <div class="cart-items">
+                <div class="text-center">
+                    <p>No Items</p>
+                </div>
+                </div>
+                <div class="course-add text-center mb-4">
+                    <a href="/cart.html" class="btn btn-outline-primary btn-blue-outline btn-md small text-capitalize" id="add-cart">View cart</a>
+                </div>
             </div>
         </div>
     </div>
@@ -245,6 +262,7 @@
     </footer>
 
     <!-- <script src="./js/course-outline.js"></script> -->
+    <script src="main.js"></script>
     <script src="/js/cart-hover.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

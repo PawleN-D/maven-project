@@ -95,7 +95,39 @@
         </div>
         <div class="container-fluid ml-4">
             <div class="cart-display p-3">
-
+                <div class="row d-flex align-items-center border-bottom w-100">
+                    <div class="col-sm-4 text-left d-flex">
+                        <div class="row">
+                            <div class="col-1 align-items-center pt-5">
+                                <div class="pt-3 pb-0">
+                                    <ion-icon name="close-circle-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="col-4 mb-4 pt-3">
+                                <div class="course-thumb">
+                                    <img class="img-responsive" src="./images/${course.tag}.png">
+                                </div>
+                            </div>
+                            <div class="col-7 p-4 align-items-center">
+                                <div class="text-wrap pt-5">
+                                    <p style="font-size: 13px;">${course.name}<br/>
+                                        ${course.period}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 text-left blue-link">
+                        R${course.price},00 Excl VAT
+                    </div>
+                    <div class="col-sm-2 text-left">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                        <span>${course.inCart}</span>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                    <div class="col-sm-3 text-left">
+                        R${course.inCart * course.price}, 00
+                    </div>
+                </div>
             </div>
 
         </div>
