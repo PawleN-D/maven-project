@@ -30,13 +30,6 @@
 
 let viewCourse = document.querySelectorAll("#view-course");
 
-for (let i = 0; i < viewCourse.length; i++){
-    viewCourse[i].addEventListener('click', ($event) => {
-        $event.preventDefault();
-        // cartNumbers(courses[i]);
-        // totalCost(courses[i]);
-    })
-}
 
 function course(name, tag, period, price, prework, mod1, mod2, mod3, mod4, mce) {
     this.name = name;
@@ -51,29 +44,27 @@ function course(name, tag, period, price, prework, mod1, mod2, mod3, mod4, mce) 
     this.mce = mce;
 }
 
-let frontEnd = new course("Become a Front-End Developer","frontend-dev", "4 Week course - In classroom", 10000, "All you need to have done beforehand, is create a few accounts with websites like Github, Gmail, CodePen and LinkedIn so that you can hit the ground running on Day 1.", "Welcome to The Maven Academy. This is the beginning of your journey to becoming a world-class developer. This course will take you through the information as though you're starting a new job as a frontend web developer. Learn 'on the job' and up-skill in both the core aspects of HTML, CSS & Javascript, as well as being a useful team member at your first job.", "We need intro In this module, you'll learn about the fundamentals of every web page: HTML & CSS. Using these 2 technologies, you'll see how to create beautiful components and layouts to create your very own site. You'll also learn how to keep a log of every change to your files, through Git, and how to safely store your code on Github. here…", "In this module, you'll discover the power of your first programming language — Javascript. You'll learn core concepts and techniques to make your website more dynamic and interactive.", "By phase 3, you will be familiar with Javascript in the front-end. So now it's time to see how Javascript can also be a powerful back-end. Using Node.js, we'll explore how Javascript can power a server, and how you can easily add functionality to your system with the Node Package Manager.", "We take you the extra mile in our standard curriculum, but for those that want to go even further beyond that—check out our Master Class Electives.");
-let fullStack = new course("Become a Full Stack Developer","full-stack-dev", "12 week course - In classroom", 26000, 0);
-let javaSpring = new course("Become a Java Spring Boot Developer","spring-boot-dev", "12 week course - In classroom ", 26000, 0);
+let frontEnd1 = new course("Become a Front-End Developer","frontend-dev", "4 Week course - In classroom", 10,000, "All you need to have done beforehand, is create a few accounts with websites like Github, Gmail, CodePen and LinkedIn so that you can hit the ground running on Day 1.", "Welcome to The Maven Academy. This is the beginning of your journey to becoming a world-class developer. This course will take you through the information as though you're starting a new job as a frontend web developer. Learn 'on the job' and up-skill in both the core aspects of HTML, CSS & Javascript, as well as being a useful team member at your first job.", "We need intro In this module, you'll learn about the fundamentals of every web page: HTML & CSS. Using these 2 technologies, you'll see how to create beautiful components and layouts to create your very own site. You'll also learn how to keep a log of every change to your files, through Git, and how to safely store your code on Github. here…", "In this module, you'll discover the power of your first programming language — Javascript. You'll learn core concepts and techniques to make your website more dynamic and interactive.", "By phase 3, you will be familiar with Javascript in the front-end. So now it's time to see how Javascript can also be a powerful back-end. Using Node.js, we'll explore how Javascript can power a server, and how you can easily add functionality to your system with the Node Package Manager.", "We take you the extra mile in our standard curriculum, but for those that want to go even further beyond that—check out our Master Class Electives.");
+let fullStack1 = new course("Become a Full Stack Developer","full-stack-dev", "12 week course - In classroom", 26,000, 0);
+let javaSpring1 = new course("Become a Java Spring Boot Developer","spring-boot-dev", "12 week course - In classroom ", 26,000, 0);
 
+let courses1 = [fullStack1,frontEnd1, javaSpring1]
 
+for (let i = 0; i < viewCourse.length; i++){
+    viewCourse[i].addEventListener('click', ($event) => {
+        $event.preventDefault();
 
-
+        // cartNumbers(courses[i]);
+        // totalCost(courses[i]);
+    })
+}
 
 function displayCart() {
-    let courses = [fullStack, frontEnd, javaSpring];
-    
-    for (let i = 0; i < viewCourse.length; i++){
-        viewCourse[i].addEventListener('click', ($event) => {
-            $event.preventDefault();
-            // cartNumbers(courses[i]);
-            // totalCost(courses[i]);
-        })
-    }
-
-
-    if (outlineContainer) {
+    for (let i = 0; i < courses1.length; i++) {
+        let course = courses1[i];
+        let outlineContainer = document.querySelector('.outline-display');
         outlineContainer.innerHTML = '';
-        Object.values(courses).map(course => {
+        if (outlineContainer) {
             outlineContainer.innerHTML += `
             <div class="row px-5">
                 <div class="col-lg-4 d-none d-lg-block px-2">
@@ -186,12 +177,14 @@ function displayCart() {
                 </div>
             </div>
             `;
-        });
+               
+        }
+    }
     
 
         
-    }
 }
+
 
 displayCart();
 
