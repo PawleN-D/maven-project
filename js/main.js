@@ -54,6 +54,7 @@ function cartNumbers(course) {
 
 function setItems(course) {
     let cartItems = localStorage.getItem('coursesInCart');
+    console.log(cartItems);
     cartItems = JSON.parse(cartItems);
 
     if (cartItems != null) {
