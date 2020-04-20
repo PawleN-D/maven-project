@@ -63,7 +63,7 @@ function displayCourse() {
     let outlineContainer =  document.querySelector('.outline-display');
     for (let i = 0; i < courses1.length; i++) {
         let course = courses1[i]; 
-        if (outlineContainer && viewCourse[i]) {
+        if (outlineContainer) {
             outlineContainer = '';
                 outlineContainer.innerHTML += `
                 <div class="row px-5">
