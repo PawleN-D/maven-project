@@ -29,11 +29,14 @@
     width: 100%;
 }
 
+
+
 .nav-tabs.modules-tabs, .nav-tabs.modules-tabs2, .nav-tabs.modules-tabs3 {
     list-style: none;
     margin: 0;
     padding: 0;
-    border-bottom: 0px;
+    /* border-bottom: 0px; */
+    border: none;
 }
 
 .modules-tabs li, .modules-tabs2 li, .modules-tabs3 li {
