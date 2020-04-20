@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/course-outline.css">
+    <link rel="stylesheet" href="./https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="././css/main.css">
+    <link rel="stylesheet" href="././css/course-outline.css">
     <title>Course Outline</title>
 
 </head>
@@ -15,7 +15,7 @@
     <header class="main-nav sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid m-0 pl-4 pt-2 pb-2">
-                <a class="navbar-brand" href="index.html"> 
+                <a class="navbar-brand" href="./index.html"> 
                     <img src= "./images/icons/footer-logo.png" alt="maven-logo"> 
                 </a> 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"       aria-expanded="false" aria-label="Toggle navigation">
@@ -24,26 +24,26 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ml-lg-auto align-self-lg-center">
                         <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item cart">
-                            <a class="nav-link" href="our-courses.html">
+                            <a class="nav-link" href="./our-courses.html">
                                 Courses
                             </a>
                         </li>
                         <li class="nav-item cart">
-                            <a class="nav-link" href="contact.html">
+                            <a class="nav-link" href="./contact.html">
                                 Contact Us
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cart.html">
+                            <a class="nav-link" href="./cart.html">
                                 Cart
                             </a>
                         </li>
                         <li class="nav-item cart" id="cart">
                             <div class="dropdown-wrapper">
-                                <a class="nav-link" href="cart.html">
+                                <a class="nav-link" href="./cart.html">
                                     <img src="./images/icons/basket-icon-png.png" alt="" width="15" height="15">
                                     <sup>0</sup>
                                 </a>
@@ -53,6 +53,8 @@
                 </div>
             </div>
         </nav>
+
+    </header>
     <!---------------------------------------------- Sidebar Cart ---------------------------------------------->
     <div class="container-fluid">
         <div class="cart-hover"id="cart-hover">
@@ -73,20 +75,126 @@
                 </div>
                 </div>
                 <div class="course-add text-center mb-4">
-                    <a href="/cart.html" class="btn btn-outline-primary btn-blue-outline btn-md small text-capitalize" id="add-cart">View cart</a>
+                    <a href="././cart.html" class="btn btn-outline-primary btn-blue-outline btn-md small text-capitalize" id="add-cart">View cart</a>
                 </div>
             </div>
         </div>
     </div>
-
-    </header>
-
     <!---------------------------------------------- Course Outline ---------------------------------------------->
 
     <section class="course-outline-wrap">
         <div class="container-fluid ">
             <div class="outline-display p-3">
-
+                <div class="row px-5">
+                    <div class="col-lg-4 d-none d-lg-block px-2">
+                        <div class="course-box d-flex flex-column text-center">
+                            <div class="course-title text-center">
+                                <a href="#" class="blue-link f-15 f-bold text-decoration-none"></a>
+                            </div>
+                            <div class="course-duration text-center">
+                                <p>${course.period}</p>
+                            </div>
+                            <div class="course-img text-center">
+                                <img src="./images/${course.tag}.png" alt="${course.tag}-banner">
+                            </div>
+                            <div class="course-price text-center mb-0">
+                                <p class="text-md-center course-title">R${course.price} Excl Vat</p>
+                            </div>
+                            <div class="course-add text-center mb-4">
+                                <a href="#" class="btn btn-outline-primary btn-blue-outline btn-md small text-capitalize" id="add-cart">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col lg-8 px-2">
+                        <div class="main-title mb-5">
+                            <h2>Course Outline</h2>
+                        </div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs modules-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#pre-work" role="tab" aria-controls="home" aria-selected="true">Pre-work</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#module1" role="tab" aria-controls="profile" aria-selected="false">Module 1</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#module2" role="tab" aria-controls="messages" aria-selected="false">Module 2</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#module3" role="tab" aria-controls="settings" aria-selected="false">Module 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#module4" role="tab" aria-controls="settings" aria-selected="false">Module 4</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="settings-tab" data-toggle="tab" href="#master" role="tab" aria-controls="settings" aria-selected="false">Master Class Electives</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content module-tab-cont">
+                            <div class="tab-pane active fade show sub-tab-body" id="pre-work" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="block-text bg-light-blue p-5 mb-5">
+                                    <div class="title mb-4">
+                                        <h4 class="f-bold">Pre-Work</h4>
+                                    </div>
+                                    <p class="mb-0">
+                                        All you need to have done beforehand, is create a few accounts with websites like Github, Gmail, CodePen and LinkedIn so that you can hit the ground running on Day 1.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="module1" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="block-text bg-light-blue p-5 mb-5">
+                                    <div class="title mb-4">
+                                        <h4 class="f-bold">Module 1</h4>
+                                    </div>
+                                    <p class="mb-0">
+                                        Welcome to The Maven Academy. This is the beginning of your journey to becoming a world-class developer. This course will take you through the information as though you're starting a new job as a frontend web developer. Learn 'on the job' and up-skill in both the core aspects of HTML, CSS & Javascript, as well as being a useful team member at your first job.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="module2" role="tabpanel" aria-labelledby="messages-tab">
+                                <div class="block-text bg-light-blue p-5 mb-5">
+                                    <div class="title mb-4">
+                                        <h4 class="f-bold">Module 2</h4>
+                                    </div>
+                                    <p class="mb-0">
+                                        Welcome to The Maven Academy. This is the beginning of your journey to becoming a world-class developer. This course will take you through the information as though you're starting a new job as a frontend web developer. Learn 'on the job' and up-skill in both the core aspects of HTML, CSS & Javascript, as well as being a useful team member at your first job.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="module3" role="tabpanel" aria-labelledby="settings-tab">
+                                <div class="block-text bg-light-blue p-5 mb-5">
+                                    <div class="title mb-4">
+                                        <h4 class="f-bold">Module 3</h4>
+                                    </div>
+                                    <p class="mb-0">
+                                        ${course.mod3}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="module4" role="tabpanel" aria-labelledby="settings-tab">
+                                <div class="block-text bg-light-blue p-5 mb-5">
+                                    <div class="title mb-4">
+                                        <h4 class="f-bold">Module 4</h4>
+                                    </div>
+                                    <p class="mb-0">
+                                        In this module, you'll discover the power of your first programming language — Javascript. You'll learn core concepts and techniques to make your website more dynamic and interactive.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="master" role="tabpanel" aria-labelledby="settings-tab">
+                                <div class="block-text bg-light-blue p-5 mb-5">
+                                    <div class="title mb-4">
+                                        <h4 class="f-bold">Master Class Electives</h4>
+                                    </div>
+                                    <p class="mb-0">
+                                        ${course.mce}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-4">
@@ -98,13 +206,13 @@
                             <div class="col">
                                 <div class="media">
                                     <div class="icon-square d-flex justify-content-center bg-blue">
-                                        <img src="/images/paper-plane.svg" alt="Paper Plane">
+                                        <img src="./images/paper-plane.svg" alt="Paper Plane">
                                     </div>
                                     <div class="media-body align-self-center">
                                         <p class="mb-4">
                                             Want to find out more about what you will learn during our 12 Week Full Stack Web Developer Course. 
                                         </p>
-                                        <a href="#download" data-toggle="modal" class="blue-link">
+                                        <a href="./#download" data-toggle="modal" class="blue-link">
                                             Click here to Download the Curriculum 
                                         </a>
                                     </div>
@@ -129,7 +237,7 @@
                                         <div class="col-lg-12">
                                             <div class="media">
                                                 <div class="icon-square d-flex justify-content-center bg-blue">
-                                                    <img src="/images/paper-plane.svg" alt="Paper Plane">
+                                                    <img src="./images/paper-plane.svg" alt="Paper Plane">
                                                 </div>
                                                 <div class="media-body align-self-center">
                                                     <p class="mb-0">
@@ -174,10 +282,10 @@
                         <div class="footer-links">
                             <ul>
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="./index.html">Home</a>
                                 </li>
                                 <li>
-                                    <a href="#">Faq</a>
+                                    <a href="./#">Faq</a>
                                 </li>
                             </ul>
                         </div>
@@ -189,13 +297,13 @@
                         <div class="footer-links">
                                 <ul>
                                     <li>
-                                        <a href="#">Why Study with us ?</a>
+                                        <a href="./#">Why Study with us ?</a>
                                     </li>
                                     <li>
-                                        <a href="#">Financial Aid - Study for Just R1</a>
+                                        <a href="./#">Financial Aid - Study for Just R1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Internship - Work, Learn & Earn</a>
+                                        <a href="./#">Internship - Work, Learn & Earn</a>
                                     </li>
                                 </ul>
                         </div>
@@ -207,13 +315,13 @@
                         <div class="footer-links">
                             <ul>
                                 <li>
-                                    <a href="#">Full Stack Web Developer</a>
+                                    <a href="./#">Full Stack Web Developer</a>
                                 </li>
                                 <li>
-                                    <a href="#">Front End Web Fundamentals</a>
+                                    <a href="./#">Front End Web Fundamentals</a>
                                 </li>
                                 <li>
-                                    <a href="#">Java Spring Boot Developer</a>
+                                    <a href="./#">Java Spring Boot Developer</a>
                                 </li>
                             </ul>
                         </div>
@@ -228,14 +336,14 @@
                                 <span>
                                     <img src="./images/icons/phone-icon.svg" alt="Phone">
                                 </span>
-                                <a href="tel:+27 21 461 68 17" class="text-white tel-number">+27 21 461 68 17</a>
+                                <a href="./tel:+27 21 461 68 17" class="text-white tel-number">+27 21 461 68 17</a>
                             </li>
                             <li>
                                 <span>
                                     <img src="./images/icons/email-icon.svg" alt="Email">
                                 </span>
                                 <p>
-                                    <a href="mailto:hello@themavenacademy.one" class="link">hello@themavenacademy.one</a>
+                                    <a href="./mailto:hello@themavenacademy.one" class="link">hello@themavenacademy.one</a>
                                 </p>
                             </li>
                             <li>
@@ -264,17 +372,17 @@
                         <div class="social-media">
                             <ul>
                                 <li>
-                                    <a href="" target="_blank" class="d-flex justify-content-center" >
+                                    <a href="./" target="_blank" class="d-flex justify-content-center" >
                                         <img src="./images/icons/facebook.svg" alt="">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" target="_blank" class="d-flex justify-content-center">
+                                    <a href="./" target="_blank" class="d-flex justify-content-center">
                                         <img src="./images/icons/twitter.svg" alt="">
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" target="_blank" class="d-flex justify-content-center">
+                                    <a href="./" target="_blank" class="d-flex justify-content-center">
                                         <img src="./images/icons/instagram.svg" alt="">
                                     </a>
                                 </li>
@@ -288,8 +396,8 @@
 </footer>
 
     <script src="./js/course-outline.js"></script>
-    <!-- <script src="/js/main.js"></script>
-    <script src="/js/cart-hover.js"></script> -->
+    <!-- <script src="./js/main.js"></script>
+    <script src="./js/cart-hover.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
