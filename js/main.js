@@ -1,10 +1,8 @@
 'use strict';
-// ----------------------------- Navbar Basket Functionality -----------------------------
-
-
 // --------------------------------------Cart Functionality -----------------------------
 let carts = document.querySelectorAll('#add-cart');
 
+//Course Constructor Function
 function course(name, tag, period, price, inCart) {
     this.name = name;
     this.tag = tag;
@@ -13,13 +11,16 @@ function course(name, tag, period, price, inCart) {
     this.inCart = inCart;
 }
 
+// Course Objects
 let frontEnd = new course("Become a Front-End Developer","frontend-dev", "4 Week course - In classroom", 10000,  0);
 let fullStack = new course("Become a Full Stack Developer","full-stack-dev", "12 week course - In classroom", 26000, 0);
 let javaSpring = new course("Become a Java Spring Boot Developer","spring-boot-dev", "12 week course - In classroom ", 26000, 0);
 
-
+// Array of Courses
 let courses = [fullStack, frontEnd, javaSpring];
 
+
+//Looping through the NodeList 
 for (let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', ($event) => {
         $event.preventDefault();
@@ -28,6 +29,7 @@ for (let i = 0; i < carts.length; i++){
     })
 }
 
+//Basket Number Load
 function onLoadCartNumbers(){
     let courseNumbers = localStorage.getItem('cartNumbers');
 
@@ -35,7 +37,7 @@ function onLoadCartNumbers(){
         document.querySelector('#cart sup').textContent = courseNumbers;
     }
 }
-
+//Count of courses selected
 function cartNumbers(course) {
     let courseNumbers = localStorage.getItem('cartNumbers');
     courseNumbers = Number(courseNumbers);
@@ -52,6 +54,7 @@ function cartNumbers(course) {
 
 }
 
+//Setting the the course to item
 function setItems(course) {
     let cartItems = localStorage.getItem('coursesInCart');
     console.log(cartItems);
@@ -76,6 +79,7 @@ function setItems(course) {
 
 }
 
+//Calculating the total amount
 function totalCost(course) {
     console.log('The product price is', course.price);
     let cartCost = localStorage.getItem('totalCost');
@@ -90,14 +94,18 @@ function totalCost(course) {
     }
 }
 
+//DDisplay CART function
 function displayCart() {
     let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-display');
     let cartCost = localStorage.getItem('totalCost');
+    // conditions checked
     if (cartItems && courseContainer) {
         courseContainer.innerHTML = '';
         Object.values(cartItems).map(course => {
+            let vatCost = cartCost * 0.15;
+            let finalCost = cartCost + vatCost;
             courseContainer.innerHTML += `
                 <div class="row d-flex align-items-center border-bottom w-100">
                     <div class="col-sm-4 text-left d-flex">
@@ -135,7 +143,7 @@ function displayCart() {
             `;
 
         });
-    
+
         courseContainer.innerHTML += `
         <div class="row w-100 p-3">
             <div class="col-lg-10"></div>
@@ -156,7 +164,7 @@ function displayCart() {
                             <p>VAT(15%</p>
                         </div>
                         <div class="col">
-                            <p class="blue-link">R${cartCost * 0.15}, 00</p>  
+                            <p class="blue-link">R${vatCost}, 00</p>  
                         </div>
                     </div>
                     <div class="row d-flex align-items-center border-bottom w-100">
@@ -164,7 +172,7 @@ function displayCart() {
                             <p>Total</p>
                         </div>
                         <div class="col">
-                            <p class="blue-link">R${(cartCost + (cartCost * 0.15))}, 00</p>  
+                            <p class="blue-link">R${finalCost}, 00</p>  
                         </div>
                     </div>
             </div>
@@ -176,6 +184,7 @@ function displayCart() {
     }
 }
 
+//Sidebar Hover Display
 function displayCartHover() {
     let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
@@ -214,9 +223,6 @@ function displayCartHover() {
 };
 
 displayCartHover();
-
-
-
 displayCart();
 onLoadCartNumbers();
 
