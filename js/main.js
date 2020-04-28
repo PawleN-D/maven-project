@@ -100,12 +100,12 @@ function displayCart() {
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-display');
     let cartCost = localStorage.getItem('totalCost');
+    let vatCost = cartCost * 0.15;
+    let finalCost = cartCost + vatCost;
     // conditions checked
     if (cartItems && courseContainer) {
         courseContainer.innerHTML = '';
         Object.values(cartItems).map(course => {
-            let vatCost = cartCost * 0.15;
-            let finalCost = cartCost + vatCost;
             courseContainer.innerHTML += `
                 <div class="row d-flex align-items-center border-bottom w-100">
                     <div class="col-sm-4 text-left d-flex">
