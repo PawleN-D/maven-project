@@ -1,0 +1,24 @@
+/******************** Main Nave Bar Styling ********************/
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0rem 3rem 0rem 0rem;
+    }
+    .navbar .navbar-toggler {
+        border: 0px;
+        outline: none;
+        padding: 0.25rem 0rem;
+        width: 30px;
+        height: 26px;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        text-align: center;
+        display: inline-block;
+        font-size: 18px;
+        padding: 0.8rem 0rem;
+    }
+
+    #cart {
+        display: none;
+    }
+}
