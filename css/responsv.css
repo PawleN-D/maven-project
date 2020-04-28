@@ -36,3 +36,25 @@
     }
 
 }   
+
+
+/******************** Why Us Responsive Styling ********************/
+
+@media (max-width: 992px){
+    .why-us-block {
+        display: block;
+        max-width: 720px;
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 40px;
+        
+    }
+}
+
+@media (max-width: 767px){
+    .main-title h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
