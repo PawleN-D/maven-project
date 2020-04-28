@@ -1,4 +1,4 @@
-/******************** Main Nave Bar Styling ********************/
+/******************** Main Nav Bar Responsive Styling ********************/
 
 @media (max-width: 992px) {
     .navbar {
@@ -22,3 +22,17 @@
         display: none;
     }
 }
+
+
+/******************** Main Banner Responsive Styling ********************/
+
+@media (max-width: 823px) {
+    .banner-wrap {
+        min-height: calc(100vh -80px);
+    }
+
+    .banner-title h1 {
+        font-size: 37px;
+    }
+
+}   
