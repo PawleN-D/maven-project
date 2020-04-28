@@ -146,8 +146,8 @@ function displayCart() {
 
         courseContainer.innerHTML += `
         <div class="row w-100 p-3">
-            <div class="col-lg-10"></div>
-            <div class="col-lg-2">
+            <div class="col-lg-8"></div>
+            <div class="col-lg-4">
                 <div class="title mb-4">
                     <h6 class="f-bold">Cart Totals</h6>
                 </div>
@@ -156,15 +156,15 @@ function displayCart() {
                             <p>Subtotal</p>
                         </div>
                         <div class="col">
-                            <p class="blue-link">R${cartCost}</p>  
+                            <p class="blue-link">R${cartCost},00</p>  
                         </div>
                     </div>
                     <div class="row d-flex align-items-center border-bottom w-100">
                         <div class="col py-2 px-4">
-                            <p>VAT(15%</p>
+                            <p>VAT(15%)</p>
                         </div>
                         <div class="col">
-                            <p class="blue-link">R${vatCost}, 00</p>  
+                            <p class="blue-link">R${vatCost},00</p>  
                         </div>
                     </div>
                     <div class="row d-flex align-items-center border-bottom w-100">
@@ -172,7 +172,7 @@ function displayCart() {
                             <p>Total</p>
                         </div>
                         <div class="col">
-                            <p class="blue-link">R${finalCost}, 00</p>  
+                            <p class="blue-link">R${finalCost},00</p>  
                         </div>
                     </div>
             </div>
