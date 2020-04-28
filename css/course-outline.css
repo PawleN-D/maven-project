@@ -6,15 +6,12 @@
 .course-box {
     padding: 10px 35px 20px;
     background-color: #ffffff;
-    /* box-shadow: 0 15px 20px 0 rgba(25, 71, 128, 0.2); */
     border-radius: 5px;
-    /* min-height: calc(100% - 20px); */
     margin: 30px 5px;
     color: #8b8b8b;
     line-height: 1.5;
     text-align: center;
     font-size: 16px;
-    /* transition: all 0.3s ease-out 0s; */
 }
 
 .btn.small {
@@ -36,6 +33,13 @@
     margin: 0;
     padding: 0;
     /* border-bottom: 0px; */
+    border: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    list-style: none;
+    background-color: #fff;
     border: none;
 }
 
