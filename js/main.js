@@ -94,14 +94,14 @@ function totalCost(course) {
     }
 }
 
-//DDisplay CART function
+//Display CART function
 function displayCart() {
     let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-display');
     let cartCost = localStorage.getItem('totalCost');
     let vatCost = cartCost * 0.15;
-    let finalCost = cartCost + vatCost;
+    let finalCost = Number(cartCost) + Number(vatCost);
     // conditions checked
     if (cartItems && courseContainer) {
         courseContainer.innerHTML = '';
