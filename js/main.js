@@ -2,7 +2,6 @@
 // --------------------------------------Cart Functionality -----------------------------
 let carts = document.querySelectorAll('#add-cart');
 
-//Course Constructor Function
 function course(name, tag, period, price, inCart) {
     this.name = name;
     this.tag = tag;
@@ -11,25 +10,21 @@ function course(name, tag, period, price, inCart) {
     this.inCart = inCart;
 }
 
-// Course Objects
 let frontEnd = new course("Become a Front-End Developer","frontend-dev", "4 Week course - In classroom", 10000,  0);
 let fullStack = new course("Become a Full Stack Developer","full-stack-dev", "12 week course - In classroom", 26000, 0);
 let javaSpring = new course("Become a Java Spring Boot Developer","spring-boot-dev", "12 week course - In classroom ", 26000, 0);
 
-// Array of Courses
+
 let courses = [fullStack, frontEnd, javaSpring];
 
-
-//Looping through the NodeList 
 for (let i = 0; i < carts.length; i++){
-    carts[i].addEventListener('click', (e) => {
-        e.preventDefault();
+    carts[i].addEventListener('click', ($event) => {
+        $event.preventDefault();
         cartNumbers(courses[i]);
         totalCost(courses[i]);
     })
 }
 
-//Basket Number Load
 function onLoadCartNumbers(){
     let courseNumbers = localStorage.getItem('cartNumbers');
 
@@ -37,7 +32,7 @@ function onLoadCartNumbers(){
         document.querySelector('#cart sup').textContent = courseNumbers;
     }
 }
-//Count of courses selected
+
 function cartNumbers(course) {
     let courseNumbers = localStorage.getItem('cartNumbers');
     courseNumbers = Number(courseNumbers);
@@ -54,10 +49,8 @@ function cartNumbers(course) {
 
 }
 
-//Setting the the course to item
 function setItems(course) {
     let cartItems = localStorage.getItem('coursesInCart');
-    console.log(cartItems);
     cartItems = JSON.parse(cartItems);
 
     if (cartItems != null) {
@@ -79,7 +72,6 @@ function setItems(course) {
 
 }
 
-//Calculating the total amount
 function totalCost(course) {
     console.log('The product price is', course.price);
     let cartCost = localStorage.getItem('totalCost');
@@ -94,7 +86,6 @@ function totalCost(course) {
     }
 }
 
-//Display CART function
 function displayCart() {
     let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
@@ -184,7 +175,6 @@ function displayCart() {
     }
 }
 
-//Sidebar Hover Display
 function displayCartHover() {
     let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
@@ -213,7 +203,6 @@ function displayCartHover() {
                 </div>
             </div>
         </div>   
-
             `;
 
         });
@@ -223,6 +212,8 @@ function displayCartHover() {
 };
 
 displayCartHover();
+
+
+
 displayCart();
 onLoadCartNumbers();
-
