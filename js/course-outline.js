@@ -1,35 +1,6 @@
-// function getCssClasses(obj) {
-// 	return obj.className.split(" ");
-// }
-
-// function arrayContains(arr, elem) {
-// 	for (var i = 0; i < arr.length; i++) {
-// 		if (arr[i] == elem) { 
-// 			return true;
-// 		}
-// 	}
-// 	return false;
-// }
-
-// function show(evt) {
-// 	document.getElementById("hidden").style.display = "block";
-// }
-
-// function hide(evt) {
-// 	document.getElementById("hidden").style.display = "none";
-// }
-
-// var allAnchors = document.getElementsByTagName("A");
-// for (var i = 0; i < allAnchors.length; i++) {
-//   var a = allAnchors[i]; 
-//   if (arrayContains(getCssClasses(a), "show")) {
-//   	a.onmouseover = show;
-//   	a.onmouseout = hide
-//   }
-// }
+'use strict';
 
 let viewCourse = document.querySelectorAll("#view-course");
-
 
 function course(name, tag, period, price, prework, mod1, mod2, mod3, mod4, mce) {
     this.name = name;
@@ -54,9 +25,16 @@ let courses1 = [fullStack1,frontEnd1, javaSpring1];
 for (let i = 0; i < viewCourse.length; i++){
     viewCourse[i].addEventListener('click', ($event) => {
         $event.preventDefault();
+        setCourse(courses1);
     })
 }
 
+function setCourse(course) {
+    for (let i = 0; i < viewCourse.length; i++) {
+      let course1 = viewCourse[i];   
+    }
+    course = course1;
+}
 
 
 function displayCourse() {
@@ -64,7 +42,6 @@ function displayCourse() {
     for (let i = 0; i < courses1.length; i++) {
         let course = courses1[i]; 
         if (outlineContainer) {
-            outlineContainer = '';
                 outlineContainer.innerHTML += `
                 <div class="row px-5">
                     <div class="col-lg-4 d-none d-lg-block px-2">
