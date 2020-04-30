@@ -31,7 +31,7 @@ for (let i = 0; i < carts.length; i++){
 
 //Basket Number Load
 function onLoadCartNumbers(){
-    let courseNumbers = sessionStorage.getItem('cartNumbers');
+    let courseNumbers = localStorage.getItem('cartNumbers');
 
     if (courseNumbers) {
         document.querySelector('#cart sup').textContent = courseNumbers;
@@ -39,14 +39,14 @@ function onLoadCartNumbers(){
 }
 //Count of courses selected
 function cartNumbers(course) {
-    let courseNumbers = sessionStorage.getItem('cartNumbers');
+    let courseNumbers = localStorage.getItem('cartNumbers');
     courseNumbers = Number(courseNumbers);
 
     if(courseNumbers){
-        sessionStorage.setItem('cartNumbers', courseNumbers + 1);
+        localStorage.setItem('cartNumbers', courseNumbers + 1);
         document.querySelector('#cart sup').textContent = courseNumbers + 1;
     } else {
-        sessionStorage.setItem('cartNumbers', 1);
+        localStorage.setItem('cartNumbers', 1);
         document.querySelector('#cart sup').textContent = 1;
     }
 
@@ -56,7 +56,7 @@ function cartNumbers(course) {
 
 //Setting the the course to item
 function setItems(course) {
-    let cartItems = sessionStorage.getItem('coursesInCart');
+    let cartItems = localStorage.getItem('coursesInCart');
     console.log(cartItems);
     cartItems = JSON.parse(cartItems);
 
@@ -75,31 +75,31 @@ function setItems(course) {
             [course.name]: course
         };
     }
-    sessionStorage.setItem('coursesInCart', JSON.stringify(cartItems));
+    localStorage.setItem('coursesInCart', JSON.stringify(cartItems));
 
 }
 
 //Calculating the total amount
 function totalCost(course) {
     console.log('The product price is', course.price);
-    let cartCost = sessionStorage.getItem('totalCost');
+    let cartCost = localStorage.getItem('totalCost');
     console.log('My cart cost is', cartCost);
     // console.log(typeof cartCost);
 
     if (cartCost != null) {
         cartCost = parseInt(cartCost);
-        sessionStorage.setItem('totalCost', cartCost + course.price);
+        localStorage.setItem('totalCost', cartCost + course.price);
     } else {
-        sessionStorage.setItem('totalCost', course.price);
+        localStorage.setItem('totalCost', course.price);
     }
 }
 
 //Display CART function
 function displayCart() {
-    let cartItems = sessionStorage.getItem('coursesInCart');
+    let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-display');
-    let cartCost = sessionStorage.getItem('totalCost');
+    let cartCost = localStorage.getItem('totalCost');
     let vatCost = cartCost * 0.15;
     let finalCost = Number(cartCost) + Number(vatCost);
     // conditions checked
@@ -186,10 +186,10 @@ function displayCart() {
 
 //Sidebar Hover Display
 function displayCartHover() {
-    let cartItems = sessionStorage.getItem('coursesInCart');
+    let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-items');
-    // let cartCost = sessionStorage.getItem('totalCost');
+    // let cartCost = localStorage.getItem('totalCost');
     if (cartItems && courseContainer) {
         courseContainer.innerHTML = '';
         Object.values(cartItems).map(course => {
