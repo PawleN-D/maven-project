@@ -22,8 +22,8 @@ let courses = [fullStack, frontEnd, javaSpring];
 
 //Looping through the NodeList 
 for (let i = 0; i < carts.length; i++){
-    carts[i].addEventListener('click', ($event) => {
-        $event.preventDefault();
+    carts[i].addEventListener('click', (e) => {
+        e.preventDefault();
         cartNumbers(courses[i]);
         totalCost(courses[i]);
     })
@@ -31,7 +31,7 @@ for (let i = 0; i < carts.length; i++){
 
 //Basket Number Load
 function onLoadCartNumbers(){
-    let courseNumbers = localStorage.getItem('cartNumbers');
+    let courseNumbers = sessionStorage.getItem('cartNumbers');
 
     if (courseNumbers) {
         document.querySelector('#cart sup').textContent = courseNumbers;
@@ -39,14 +39,14 @@ function onLoadCartNumbers(){
 }
 //Count of courses selected
 function cartNumbers(course) {
-    let courseNumbers = localStorage.getItem('cartNumbers');
+    let courseNumbers = sessionStorage.getItem('cartNumbers');
     courseNumbers = Number(courseNumbers);
 
     if(courseNumbers){
-        localStorage.setItem('cartNumbers', courseNumbers + 1);
+        sessionStorage.setItem('cartNumbers', courseNumbers + 1);
         document.querySelector('#cart sup').textContent = courseNumbers + 1;
     } else {
-        localStorage.setItem('cartNumbers', 1);
+        sessionStorage.setItem('cartNumbers', 1);
         document.querySelector('#cart sup').textContent = 1;
     }
 
@@ -56,7 +56,7 @@ function cartNumbers(course) {
 
 //Setting the the course to item
 function setItems(course) {
-    let cartItems = localStorage.getItem('coursesInCart');
+    let cartItems = sessionStorage.getItem('coursesInCart');
     console.log(cartItems);
     cartItems = JSON.parse(cartItems);
 
@@ -75,31 +75,31 @@ function setItems(course) {
             [course.name]: course
         };
     }
-    localStorage.setItem('coursesInCart', JSON.stringify(cartItems));
+    sessionStorage.setItem('coursesInCart', JSON.stringify(cartItems));
 
 }
 
 //Calculating the total amount
 function totalCost(course) {
     console.log('The product price is', course.price);
-    let cartCost = localStorage.getItem('totalCost');
+    let cartCost = sessionStorage.getItem('totalCost');
     console.log('My cart cost is', cartCost);
     // console.log(typeof cartCost);
 
     if (cartCost != null) {
         cartCost = parseInt(cartCost);
-        localStorage.setItem('totalCost', cartCost + course.price);
+        sessionStorage.setItem('totalCost', cartCost + course.price);
     } else {
-        localStorage.setItem('totalCost', course.price);
+        sessionStorage.setItem('totalCost', course.price);
     }
 }
 
 //Display CART function
 function displayCart() {
-    let cartItems = localStorage.getItem('coursesInCart');
+    let cartItems = sessionStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-display');
-    let cartCost = localStorage.getItem('totalCost');
+    let cartCost = sessionStorage.getItem('totalCost');
     let vatCost = cartCost * 0.15;
     let finalCost = Number(cartCost) + Number(vatCost);
     // conditions checked
@@ -186,10 +186,10 @@ function displayCart() {
 
 //Sidebar Hover Display
 function displayCartHover() {
-    let cartItems = localStorage.getItem('coursesInCart');
+    let cartItems = sessionStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-items');
-    // let cartCost = localStorage.getItem('totalCost');
+    // let cartCost = sessionStorage.getItem('totalCost');
     if (cartItems && courseContainer) {
         courseContainer.innerHTML = '';
         Object.values(cartItems).map(course => {
