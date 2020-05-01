@@ -357,7 +357,9 @@ img {
     /*********************************** Our Courses CSS**** End **************************/
 
     /*********************************** Careers Section CSS**** Start **************************/
-
+.career-services-wrap {
+    padding: 80px 0;
+}
 
 .img-fluid {
     max-width: 100%;
