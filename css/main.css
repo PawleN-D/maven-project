@@ -58,8 +58,9 @@ ol, ul {
     line-height: normal;
     background: none;
     border-radius: 40px;
-    border: 1px solid;
+    border: 2px solid #60a0e3;
     margin: 0;
+    color: #5b9de3;
     padding: 10px 30px 12px;
     cursor: pointer;
     outline: none;
@@ -69,12 +70,19 @@ ol, ul {
     box-shadow: none;
     text-decoration: none;
 }
-  
-.btn-blue {
+
+.small-btn {
+    min-width: 150px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 14px;
+}
+
+/* .btn-blue {
     background-color: #5b9de3;
     border: 2px solid #5b9de3;
     color: #ffffff;
-}
+} */
 
     /*********************************** Navbar CSS**** Start **************************/
 
