@@ -62,3 +62,11 @@
         text-align: center;
     }
 }
+
+/******************** Careers Responsive Styling ********************/
+
+@media (max-width: 767px) {
+    .career-services-wrap {
+        text-align: center;
+    }
+}
