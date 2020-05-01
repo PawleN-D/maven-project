@@ -43,12 +43,12 @@
 @media (max-width: 992px){
     .why-us-block {
         display: block;
-        max-width: 720px;
+        max-width: 100%;
         margin: auto;
         padding-left: 15px;
         padding-right: 15px;
         margin-bottom: 40px;
-        
+        text-align: center;
     }
 }
 
@@ -56,5 +56,9 @@
     .main-title h2 {
         font-size: 30px;
         line-height: 40px;
+    }
+
+    .media {
+        text-align: center;
     }
 }
