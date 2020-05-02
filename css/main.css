@@ -197,8 +197,12 @@ nav li a {
 .banner-wrap {
     justify-content: center;
     margin-top: 0px;
-    min-height: calc(100vh - 67px);
     padding: 60px 0;
+
+}
+
+#full-height {
+    min-height: calc(100vh - 67px);
 
 }
 .banner-title h1 {
