@@ -70,3 +70,14 @@
         text-align: center;
     }
 }
+
+/******************** Home Page Responsive Styling End ********************/
+
+/******************** Contact Page Responsive Styling ********************/
+
+@media (max-width: 992px) {
+    .inquiry-form {
+        margin-top: 60px;
+        padding: 40px;
+    }
+}
