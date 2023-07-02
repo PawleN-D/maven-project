@@ -1,8 +1,9 @@
 'use strict';
+
 // --------------------------------------Cart Functionality -----------------------------
 let carts = document.querySelectorAll('#add-cart');
 
-function course(name, tag, period, price, inCart) {
+function Course(name, tag, period, price, inCart) {
     this.name = name;
     this.tag = tag;
     this.period = period;
@@ -10,22 +11,21 @@ function course(name, tag, period, price, inCart) {
     this.inCart = inCart;
 }
 
-let frontEnd = new course("Become a Front-End Developer","frontend-dev", "4 Week course - In classroom", 10000,  0);
-let fullStack = new course("Become a Full Stack Developer","full-stack-dev", "12 week course - In classroom", 26000, 0);
-let javaSpring = new course("Become a Java Spring Boot Developer","spring-boot-dev", "12 week course - In classroom ", 26000, 0);
-
+let frontEnd = new Course("Become a Front-End Developer", "frontend-dev", "4 Week course - In classroom", 10000, 0);
+let fullStack = new Course("Become a Full Stack Developer", "full-stack-dev", "12 week course - In classroom", 26000, 0);
+let javaSpring = new Course("Become a Java Spring Boot Developer", "spring-boot-dev", "12 week course - In classroom", 26000, 0);
 
 let courses = [fullStack, frontEnd, javaSpring];
 
-for (let i = 0; i < carts.length; i++){
-    carts[i].addEventListener('click', ($event) => {
-        $event.preventDefault();
+for (let i = 0; i < carts.length; i++) {
+    carts[i].addEventListener('click', (event) => {
+        event.preventDefault();
         cartNumbers(courses[i]);
         totalCost(courses[i]);
-    })
+    });
 }
 
-function onLoadCartNumbers(){
+function onLoadCartNumbers() {
     let courseNumbers = localStorage.getItem('cartNumbers');
 
     if (courseNumbers) {
@@ -35,9 +35,9 @@ function onLoadCartNumbers(){
 
 function cartNumbers(course) {
     let courseNumbers = localStorage.getItem('cartNumbers');
-    courseNumbers = Number(courseNumbers);
+    courseNumbers = parseInt(courseNumbers);
 
-    if(courseNumbers){
+    if (courseNumbers) {
         localStorage.setItem('cartNumbers', courseNumbers + 1);
         document.querySelector('#cart sup').textContent = courseNumbers + 1;
     } else {
@@ -46,20 +46,15 @@ function cartNumbers(course) {
     }
 
     setItems(course);
-
 }
 
 function setItems(course) {
     let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
 
-    if (cartItems != null) {
-
-        if (cartItems[course.name] == undefined) {
-            cartItems = {
-                ...cartItems,
-                [course.name]: course
-            };
+    if (cartItems !== null) {
+        if (cartItems[course.name] === undefined) {
+            cartItems[course.name] = course;
         }
         cartItems[course.name].inCart += 1;
     } else {
@@ -69,21 +64,13 @@ function setItems(course) {
         };
     }
     localStorage.setItem('coursesInCart', JSON.stringify(cartItems));
-
 }
 
 function totalCost(course) {
-    console.log('The product price is', course.price);
     let cartCost = localStorage.getItem('totalCost');
-    console.log('My cart cost is', cartCost);
-    // console.log(typeof cartCost);
+    cartCost = parseInt(cartCost) || 0;
 
-    if (cartCost != null) {
-        cartCost = parseInt(cartCost);
-        localStorage.setItem('totalCost', cartCost + course.price);
-    } else {
-        localStorage.setItem('totalCost', course.price);
-    }
+    localStorage.setItem('totalCost', cartCost + course.price);
 }
 
 function displayCart() {
@@ -93,7 +80,7 @@ function displayCart() {
     let cartCost = localStorage.getItem('totalCost');
     let vatCost = cartCost * 0.15;
     let finalCost = Number(cartCost) + Number(vatCost);
-    // conditions checked
+
     if (cartItems && courseContainer) {
         courseContainer.innerHTML = '';
         Object.values(cartItems).map(course => {
@@ -128,20 +115,19 @@ function displayCart() {
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </div>
                     <div class="col-sm-3 text-left">
-                        R${course.inCart * course.price}, 00
+                        R${course.inCart * course.price},00
                     </div>
                 </div>
             `;
-
         });
 
         courseContainer.innerHTML += `
-        <div class="row w-100 p-3">
-            <div class="col-lg-8"></div>
-            <div class="col-lg-4">
-                <div class="title mb-4">
-                    <h6 class="f-bold">Cart Totals</h6>
-                </div>
+            <div class="row w-100 p-3">
+                <div class="col-lg-8"></div>
+                <div class="col-lg-4">
+                    <div class="title mb-4">
+                        <h6 class="f-bold">Cart Totals</h6>
+                    </div>
                     <div class="row d-flex align-items-center border-bottom w-100">
                         <div class="col py-2 px-4">
                             <p>Subtotal</p>
@@ -166,12 +152,9 @@ function displayCart() {
                             <p class="blue-link">R${finalCost},00</p>  
                         </div>
                     </div>
+                </div>
             </div>
-
-                
-        </div>
-            `;
-        
+        `;
     }
 }
 
@@ -179,41 +162,35 @@ function displayCartHover() {
     let cartItems = localStorage.getItem('coursesInCart');
     cartItems = JSON.parse(cartItems);
     let courseContainer = document.querySelector('.cart-items');
-    // let cartCost = localStorage.getItem('totalCost');
+
     if (cartItems && courseContainer) {
         courseContainer.innerHTML = '';
         Object.values(cartItems).map(course => {
             courseContainer.innerHTML += `
-            <div class="row">
-            <div class="col-2 align-items-center pt-5">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="col-4 mb-4 pt-3">
-                <div class="course-thumb">
-                    <img class="img-responsive" src="./images/${course.tag}.png">
-                </div>
-            </div>
-            <div class="col-6 p-2 align-items-center">
-                <div class="text-wrap pt-5">
-                    <p style="font-size: 13px;">${course.name}<br/>
-                    ${course.period}<br/>
-                    R${course.price},00</p>
-                </div>
-            </div>
-        </div>   
+                <div class="row">
+                    <div class="col-2 align-items-center pt-5">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="col-4 mb-4 pt-3">
+                        <div class="course-thumb">
+                            <img class="img-responsive" src="./images/${course.tag}.png">
+                        </div>
+                    </div>
+                    <div class="col-6 p-2 align-items-center">
+                        <div class="text-wrap pt-5">
+                            <p style="font-size: 13px;">${course.name}<br/>
+                            ${course.period}<br/>
+                            R${course.price},00</p>
+                        </div>
+                    </div>
+                </div>   
             `;
-
         });
-    
-        
     }
-};
+}
 
 displayCartHover();
-
-
-
 displayCart();
 onLoadCartNumbers();
